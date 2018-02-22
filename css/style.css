@@ -14,13 +14,14 @@ body {
     background: #000;
     color: white;
 }
-
+.top-nav-bar{
+    padding: 35px 16px 35px 16px;
+}
 .logo{
     float: left;
     font-size: 22px;
     font-family: 'Hiragino Kaku Gothic Std';
     color: #9a9da2;
-    margin-top: 33px;
     margin-left: 18px;
 }
 .rs{
@@ -28,13 +29,13 @@ body {
 }
 nav{
     float: right;
+    padding-top: 8px;
 }
 .top-nav-bar>nav>ul>li{
     float: left;
     list-style: none;
     margin-left: 17px;
     margin-right: 17px;
-    margin-top: 40px;
     font-size: 12px;
     font-weight: bold;
     border: 1px transparent;
