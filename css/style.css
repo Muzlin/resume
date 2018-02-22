@@ -20,7 +20,7 @@ body {
 .logo{
     float: left;
     font-size: 22px;
-    font-family: 'Hiragino Kaku Gothic Std';
+    font-family: 'Arial Black';
     color: #9a9da2;
     margin-left: 18px;
 }
@@ -29,7 +29,7 @@ body {
 }
 nav{
     float: right;
-    padding-top: 8px;
+    padding-top: 7px;
 }
 .top-nav-bar>nav>ul>li{
     float: left;
