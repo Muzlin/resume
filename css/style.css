@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+body {
+    background: #000;
+    color: white;
+}
+
+.logo{
+    float: left;
+    font-size: 22px;
+    font-family: 'Hiragino Kaku Gothic Std';
+    color: #9a9da2;
+    margin-top: 33px;
+    margin-left: 18px;
+}
+.rs{
+    color: #e6686d;
+}
+nav{
+    float: right;
+}
+.top-nav-bar>nav>ul>li{
+    float: left;
+    list-style: none;
+    margin-left: 17px;
+    margin-right: 17px;
+    margin-top: 40px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px transparent;
+}
+.top-nav-bar>nav a{
+    color: rgba(255, 255, 255, 0.7);
+}
+.top-nav-bar>nav a:hover{
+    border-bottom: 3px solid #e6686d;
+    padding-bottom: 5px;
+}
