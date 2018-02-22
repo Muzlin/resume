@@ -38,12 +38,15 @@ nav{
     margin-right: 17px;
     font-size: 12px;
     font-weight: bold;
-    border: 1px transparent;
+    
 }
 .top-nav-bar>nav a{
     color: rgba(255, 255, 255, 0.7);
+    display: block;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    padding-bottom: 5px;
 }
 .top-nav-bar>nav a:hover{
-    border-bottom: 3px solid #e6686d;
-    padding-bottom: 5px;
+    border-bottom-color: #e6686d;
 }
