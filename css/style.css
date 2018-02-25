@@ -30,7 +30,11 @@ li {
     display: block;
     clear: both;
 }
-
+.shadow{
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
 body {
     background: #EFEFEF;
 }
@@ -245,9 +249,6 @@ section.portfolio h2 {
 section.skills .skills-inner {
     background-color: #FFFFFF;
     padding: 40px 30px 20px 30px;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
 section.skills .skills-inner>ul>li {
@@ -277,31 +278,35 @@ section.skills .skills-inner>ul>li .bar-inner {
     display: block;
     border-radius: 2px;
 }
-section.portfolio nav{
+
+section.portfolio {
     text-align: center;
 }
-section.portfolio nav>.nav-inner{
+
+section.portfolio nav {
     display: inline-block;
     vertical-align: top;
-    
 }
-section.portfolio .nav-inner>ul>li{
+
+section.portfolio nav>ul>li {
     float: left;
     margin-left: 40px;
     cursor: pointer;
 }
-section.portfolio .nav-inner>ul>li:first-child{
+
+section.portfolio nav>ul>li:first-child {
     margin-left: 1px;
 }
-section.portfolio .nav-inner>.nav-bar{
+
+section.portfolio .nav-bar {
     height: 5px;
-    background-color:#FFFFFF;
+    background-color: #FFFFFF;
     border-radius: 2px;
     margin-top: 5px;
     text-align: left;
 }
-section.portfolio .nav-inner>.nav-bar>.nav-bar-inner-1{
-    content: "";
+
+section.portfolio .nav-bar>.nav-bar-inner {
     background-color: #E4696C;
     display: inline-block;
     height: 100%;
@@ -310,38 +315,28 @@ section.portfolio .nav-inner>.nav-bar>.nav-bar-inner-1{
     border-radius: 2px;
     transition: all 0.3s;
 }
-section.portfolio .nav-inner>.nav-bar>.nav-bar-inner-2{
-    content: "";
-    background-color: #E4696C;
-    display: inline-block;
-    height: 100%;
-    width: 19%;
-    vertical-align: top;
-    border-radius: 2px;
+
+section.portfolio .nav-bar>.nav-bar-inner.state-2 {
     margin-left: 73px;
-    transition: all 0.3s;
 }
-section.portfolio .nav-inner>.nav-bar>.nav-bar-inner-3{
-    content: "";
-    background-color: #E4696C;
-    display: inline-block;
-    height: 100%;
-    width: 19%;
-    vertical-align: top;
-    border-radius: 2px;
+
+section.portfolio .nav-bar>.nav-bar-inner.state-3 {
     margin-left: 143px;
-    transition: all 0.3s;
 }
-section.portfolio .jobs{
-    margin-top: 30px;
+
+section.portfolio .jobs {
+    margin: 30px 0 50px 0;
+    position: relative;
+    height: 597px;
 }
-section.portfolio .jobs>.big{
-    float: left;
-    vertical-align: top;
+
+section.portfolio .jobs>.big {
+    position: absolute;
 }
-section.portfolio .jobs>.small{
-    float: right;
+
+section.portfolio .jobs>.small {
+    position: absolute;
 }
-section.portfolio .jobs>.small>.small-inner:first-child{
-    margin-bottom: 22px;
+section.portfolio .jobs img{
+    display: block;
 }
