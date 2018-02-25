@@ -21,6 +21,10 @@ hr {
     border-bottom: 1px solid #DEDEDE;
 }
 
+li {
+    list-style: none;
+}
+
 .clearfix::after {
     content: "";
     display: block;
@@ -91,25 +95,27 @@ body {
     display: block;
 }
 
-main .card-box {
+.card-box {
     max-width: 930px;
     margin: 0 auto;
     background-color: #fff;
-    position: relative;
-    bottom: 345px;
+    margin-top: -345px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
-.card .picture,
-.text {
+.card-box .card-inner .picture,
+.card-box .card-inner .text {
     float: left;
     margin: 57px 0 57px 50px;
 }
 
-.card .text {
+.card-box .card-inner .text {
     margin-left: 60px;
 }
 
-.card .text .welcome {
+.card-box .card-inner .text .welcome {
     background: #E6686D;
     padding: 4px 9px;
     color: #fff;
@@ -118,7 +124,7 @@ main .card-box {
     position: relative;
 }
 
-.card .text .welcome::after {
+.card-box .card-inner .text .welcome::after {
     content: "";
     border-bottom: 9px solid transparent;
     border-left: 9px solid #E6686D;
@@ -129,56 +135,213 @@ main .card-box {
     left: 5px;
 }
 
-.card .text .welcome h1 {
+.card-box .card-inner .text .welcome h1 {
     margin-bottom: 5px;
 }
 
-.card .text hr {
+.card-box .card-inner .text hr {
     width: 470px;
     margin: 20px 0;
 }
 
-.card .text dt,
-.card .text dl {
+.card-box .card-inner .text dt,
+.card-box .card-inner .text dl {
     float: left;
     margin: 5px 0;
 }
 
-.card .text dt {
+.card-box .card-inner .text dt {
     width: 30%;
     font-weight: bold;
 }
 
-.card .text dl {
+.card-box .card-inner .text dl {
     width: 70%;
-    color: #D0D1D4;
+    color: #9DA0A7;
 }
 
-main .card-box footer.link {
+.card-box .card-inner .text dl a {
+    color: #9DA0A7;
+}
+
+.card-box .card-inner .text dl a:hover {
+    color: #E4696F;
+}
+
+.card-box footer.link {
     background-color: #E6686D;
-    padding: 22px 0;
+    padding: 20px 0;
 }
 
-main .card-box footer.link {
+.card-box footer.link {
     text-align: center;
 }
 
-main .card-box footer.link a {
+.card-box footer.link a {
     border-radius: 50%;
     padding: 10px 0;
     display: inline-block;
     margin: 0px 10px;
-    width: 40px;
-    line-height: 20px;
+    width: 45px;
+    line-height: 25px;
 }
 
-main .card-box footer.link a:hover {
+.card-box footer.link a:hover {
     background: #CE5D62;
 }
 
-main .card-box footer.link svg {
-    width: 20px;
-    height: 20px;
+.card-box footer.link svg {
+    width: 25px;
+    height: 25px;
     fill: #FFF;
     vertical-align: top;
+}
+
+body>main .downloan-resume-wapper {
+    text-align: center;
+    margin: 38px 0;
+}
+
+body>main .download-resume {
+    border: 1px solid #CBCDCF;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 19px 112px;
+    display: inline-block;
+    color: #464C58;
+    font-weight: bold;
+    line-height: 20px;
+    transition: box-shadow 0.5s;
+}
+
+body>main .download-resume:hover {
+    -webkit-box-shadow: 0px 5px 16px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 5px 16px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 16px 2px rgba(0, 0, 0, 0.3);
+}
+
+body>main .description {
+    text-align: center;
+    font-family: "kai";
+    font-size: 16px;
+    line-height: 2;
+}
+
+section.skills,
+section.portfolio {
+    max-width: 940px;
+    margin: 70px auto 70px auto;
+}
+
+section.skills h2,
+section.portfolio h2 {
+    text-align: center;
+    margin: 60px 0 30px 0;
+    color: #3D4450;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+section.skills .skills-inner {
+    background-color: #FFFFFF;
+    padding: 40px 30px 20px 30px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+section.skills .skills-inner>ul>li {
+    float: left;
+    width: 50%;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+section.skills>ul>li>span {
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+section.skills .skills-inner>ul>li>.bar-progress {
+    height: 5px;
+    ;
+    background-color: #FAE1E1;
+    border-radius: 2px;
+    margin: 5px 50px 0 0;
+}
+
+section.skills .skills-inner>ul>li .bar-inner {
+    background-color: #E6686D;
+    width: 30%;
+    height: 100%;
+    display: block;
+    border-radius: 2px;
+}
+section.portfolio nav{
+    text-align: center;
+}
+section.portfolio nav>.nav-inner{
+    display: inline-block;
+    vertical-align: top;
+    
+}
+section.portfolio .nav-inner>ul>li{
+    float: left;
+    margin-left: 40px;
+    cursor: pointer;
+}
+section.portfolio .nav-inner>ul>li:first-child{
+    margin-left: 1px;
+}
+section.portfolio .nav-inner>.nav-bar{
+    height: 5px;
+    background-color:#FFFFFF;
+    border-radius: 2px;
+    margin-top: 5px;
+    text-align: left;
+}
+section.portfolio .nav-inner>.nav-bar>.nav-bar-inner-1{
+    content: "";
+    background-color: #E4696C;
+    display: inline-block;
+    height: 100%;
+    width: 19%;
+    vertical-align: top;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+section.portfolio .nav-inner>.nav-bar>.nav-bar-inner-2{
+    content: "";
+    background-color: #E4696C;
+    display: inline-block;
+    height: 100%;
+    width: 19%;
+    vertical-align: top;
+    border-radius: 2px;
+    margin-left: 73px;
+    transition: all 0.3s;
+}
+section.portfolio .nav-inner>.nav-bar>.nav-bar-inner-3{
+    content: "";
+    background-color: #E4696C;
+    display: inline-block;
+    height: 100%;
+    width: 19%;
+    vertical-align: top;
+    border-radius: 2px;
+    margin-left: 143px;
+    transition: all 0.3s;
+}
+section.portfolio .jobs{
+    margin-top: 30px;
+}
+section.portfolio .jobs>.big{
+    float: left;
+    vertical-align: top;
+}
+section.portfolio .jobs>.small{
+    float: right;
+}
+section.portfolio .jobs>.small>.small-inner:first-child{
+    margin-bottom: 22px;
 }

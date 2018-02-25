@@ -51,7 +51,7 @@
     <!-- banner end -->
     <main>
         <div class="card-box">
-            <div class="card clearfix">
+            <div class="card-inner clearfix">
                 <div class="picture">
                     <img src="./img/avatar.jpg" width="290" height="320" alt="头像">
                 </div>
@@ -61,14 +61,16 @@
                     <p>前端开发工程师</p>
                     <hr>
                     <dd>
-                        <dt>年龄</dt>
-                        <dl>27</dl>
-                        <dt>地址</dt>
+                        <dt>所在城市</dt>
                         <dl>成都</dl>
                         <dt>电话</dt>
                         <dl>1811234567</dl>
                         <dt>邮箱</dt>
                         <dl>1030996014@qq.com</dl>
+                        <dt>博客</dt>
+                        <dl>
+                            <a href="https://www.muzlin.cn" target="_blank">muzlin.cn</a>
+                        </dl>
                     </dd>
                 </div>
             </div>
@@ -90,38 +92,104 @@
                 </a>
             </footer>
         </div>
-        <a href="#">下载简历</a>
-        <p>
-            个人简介个人简介个人简介个人简介个人简介个人简介个人简介
-            <br> 个人简介个人简介个人简介个人简介个人简介个人简介
+        <div class="downloan-resume-wapper">
+            <a class="download-resume" href="#">下载 PDF 简历</a>
+        </div>
+        <p class="description">
+            李霖，前端开发工程师，PHP&.NET后端工程师，现就职于 口贷网 任职.NET开发。
+            <br> 技能：前端开发，PHP开发，.NET开发，Node.js开发
         </p>
     </main>
     <!-- main end -->
-    <section>
+    <section class="skills">
         <h2>技能</h2>
-        <div class="skills">
-            <ul>
-                <li>aaa</li>
-                <li>aaa</li>
-                <li>aaa</li>
-                <li>aaa</li>
-                <li>aaa</li>
+        <div class="skills-inner">
+            <ul class="clearfix">
+                <li>
+                    <span>HTML 5 & CSS3</span>
+                    <div class="bar-progress">
+                        <span class="bar-inner" style="width:40%;">
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <span>JavaScript & JQuery</span>
+                    <div class="bar-progress">
+                        <span class="bar-inner" style="width:50%;">
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <span>Vue.js & React.js</span>
+                    <div class="bar-progress">
+                        <span class="bar-inner" style="width:30%;">
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <span>Node.js</span>
+                    <div class="bar-progress">
+                        <span class="bar-inner" style="width:20%;">
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <span>PHP & ThinkPHP</span>
+                    <div class="bar-progress">
+                        <span class="bar-inner" style="width:60%;">
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <span>C# & .NET</span>
+                    <div class="bar-progress">
+                        <span class="bar-inner" style="width:80%;">
+                        </span>
+                    </div>
+                </li>
             </ul>
         </div>
     </section>
-    <section>
+    <section class="portfolio">
         <h2>作品</h2>
-        <nav>
-            <ul>
-                <li>bbb</li>
-                <li>bbb</li>
-                <li>bbb</li>
-            </ul>
-        </nav>
-        <div class="jobs">
-            <div class="big"></div>
-            <div class="small"></div>
-            <div class="small"></div>
+        <div class="portfolio-inner">
+            <nav>
+                <div class="nav-inner">
+                    <ul class="clearfix">
+                        <li id="portfolio1">所有</li>
+                        <li id="portfolio2">框架</li>
+                        <li id="portfolio3">其他</li>
+                    </ul>
+                    <div class="nav-bar">
+                        <span id="portfolioBar" class="nav-bar-inner-1"></span>
+                    </div>
+
+                    <script>
+                        portfolio1.onclick = function () {
+                            portfolioBar.className = 'nav-bar-inner-1'
+                        }
+                        portfolio2.onclick = function () {
+                            portfolioBar.className = 'nav-bar-inner-2'
+                        }
+                        portfolio3.onclick = function () {
+                            portfolioBar.className = 'nav-bar-inner-3'
+                        }
+                    </script>
+                </div>
+            </nav>
+            <div class="jobs clearfix">
+                <div class="big">
+                    <img src="./img/1.jpg" alt="">
+                </div>
+                <div class="small">
+                    <div class="small-inner">
+                        <img src="./img/2.jpg" alt="">
+                    </div>
+                    <div class="small-inner">
+                        <img src="./img/3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </body>
