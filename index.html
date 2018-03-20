@@ -244,11 +244,10 @@
                 let top = element.offsetTop
                 // 缓动
                 let n = 25
-                let duration = 500 / n
+                let duration = 500 / n  // 多少时间动一次
                 let currentTop = window.scrollY // 当前的高度
                 let targetTop = top - 70    // 要到元素的高度
-                let distance = (targetTop - currentTop) / n // 每次动多少
-                
+                let distance = (targetTop - currentTop) / n // 每次动多少                
                 i = 0
                 let id = setInterval(() => {
                     ++i
@@ -257,6 +256,8 @@
                 }, duration)                
             }
         }
+
+
     </script>
 </body>
 
