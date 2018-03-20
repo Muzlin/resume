@@ -10,6 +10,7 @@
     <!-- <link rel="stylesheet" href="./css/loading.css"> -->
     <!-- icon -->
     <script src="//at.alicdn.com/t/font_572339_j00wzda338c6usor.js"></script>
+    <script src="./scripts/tween.min.js"></script>
 </head>
 
 <body>
@@ -67,7 +68,7 @@
     <div class="banner">
     </div>
     <!-- banner end -->
-    <main id="siteAbout" class="main">
+    <main data-scrolly id="siteAbout" class="main">
         <div class="card-box">
             <div class="card-inner clearfix">
                 <div class="picture">
@@ -119,7 +120,7 @@
         </p>
     </main>
     <!-- main end -->
-    <section id="siteSkills" class="skills">
+    <section data-scrolly id="siteSkills" class="skills">
         <h2>技能</h2>
         <div class="skills-inner shadow">
             <ul class="clearfix">
@@ -168,7 +169,7 @@
             </ul>
         </div>
     </section>
-    <section id="sitePortfolio" class="portfolio">
+    <section data-scrolly id="sitePortfolio" class="portfolio">
         <h2>作品</h2>
         <nav>
             <ul class="clearfix">
@@ -231,11 +232,11 @@
             }
         }
 
-        // 获取导航下所有a连接
+        // 点击导航按钮 缓动到指定位置
         let navATargets = document.querySelectorAll('nav > ul.menu > li > a')
         for (let index = 0; index < navATargets.length; index++) {
             navATargets[index].onclick = function (e) {
-                e.preventDefault()  // 阻止a的默认事件
+                e.preventDefault() // 阻止a的默认事件
                 let aTarget = e.currentTarget
                 let href = aTarget.getAttribute('href')
                 // 获取对应的div
@@ -243,21 +244,30 @@
                 // 获取div到窗口顶部的距离
                 let top = element.offsetTop
                 // 缓动
-                let n = 25
-                let duration = 500 / n  // 多少时间动一次
                 let currentTop = window.scrollY // 当前的高度
-                let targetTop = top - 70    // 要到元素的高度
-                let distance = (targetTop - currentTop) / n // 每次动多少                
-                i = 0
-                let id = setInterval(() => {
-                    ++i
-                    if(i === n){window.clearInterval(id)}
-                    window.scrollTo(0, currentTop + distance * i)
-                }, duration)                
+                let targetTop = top - 70 // 要到元素的高度 
+                let length = Math.abs(currentTop - targetTop)   // 移动的距离
+                let time = (length/500)*800 // 移动500PX用800毫秒 移动的距离/500 * 1000就是移动的时间
+                function animate(time) {
+                    requestAnimationFrame(animate)
+                    TWEEN.update(time)
+                }
+                requestAnimationFrame(animate)
+                let coords = {
+                    y: currentTop
+                };
+                let tween = new TWEEN.Tween(coords)
+                    .to({
+                        y: targetTop
+                    }, time > 800 ? 800 : time) 
+                    .easing(TWEEN.Easing.Quadratic.InOut)
+                    .onUpdate(function () {
+                        window.scrollTo(0,coords.y)
+                        currentTop = coords.y
+                    })
+                    .start()
             }
         }
-
-
     </script>
 </body>
 
