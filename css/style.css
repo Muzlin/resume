@@ -44,8 +44,13 @@ li {
 }
 
 /* reset end */
-
-
+[data-scrolly]{
+    transform: translateY(0);
+    transition: all 0.3s;
+}
+[data-scrolly].offset{
+    transform: translateY(100px);
+}
 body {
     background: #EFEFEF;
 }
@@ -127,7 +132,8 @@ body {
     position: relative;
 }
 
-.top-nav-bar .menu > li.active > a::after {
+.top-nav-bar .menu > li.active > a::after,
+.top-nav-bar .menu > li.scroll > a::after {
     /* border-bottom-color: #e6686d; */
     content: '';
     display: block;
@@ -370,10 +376,10 @@ section.skills>ul>li>span {
 
 section.skills .skills-inner>ul>li>.bar-progress {
     height: 5px;
-    ;
     background-color: #FAE1E1;
     border-radius: 2px;
     margin: 5px 50px 0 0;
+    overflow: hidden;
 }
 
 section.skills .skills-inner>ul>li .bar-inner {
@@ -382,6 +388,11 @@ section.skills .skills-inner>ul>li .bar-inner {
     height: 100%;
     display: block;
     border-radius: 2px;
+    transform: translateX(0);
+    transition: all 1s;
+}
+section.skills.offset .skills-inner>ul>li .bar-inner{
+    transform: translateX(-100%);
 }
 
 section.portfolio {

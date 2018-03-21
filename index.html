@@ -206,11 +206,13 @@
         </div>
     </section>
     <script>
-        // setTimeout(function(){
-        //     //let t = document.getElementsByClassName('site-loading')
-        //     t.classList.remove('active')
-        // },1500)
-
+        // 获取所有标记元素
+        let scrollElements = document.querySelectorAll('[data-scrolly]')        
+        for (let index = 0; index < scrollElements.length; index++) {
+            // 给标记元素添加偏移类
+            scrollElements[index].classList.add('offset')
+        }
+        GetRecentElement();
         // 滑动事件
         window.onscroll = function () {
             if (window.scrollY < 50) {
@@ -218,7 +220,30 @@
             } else {
                 topNavBar.classList.add('stick')
             }
+            GetRecentElement();
+        }
 
+        // 获取距离视口最近的标记元素 并做一些处理
+        function GetRecentElement() {
+            // 获取最接近视口的元素ID
+            let minIndex = 0;
+            for (let index = 0; index < scrollElements.length; index++) {
+                let nowTop = window.scrollY // 当前的高度
+                if (Math.abs(scrollElements[index].offsetTop - nowTop) < Math.abs(scrollElements[minIndex].offsetTop -
+                        nowTop)) {
+                    minIndex = index
+                }
+            }
+            let id = scrollElements[minIndex].id
+            for (let index = 0; index < scrollElements.length; index++) {
+                // 给标记元素对应的导航元素移除高亮类
+                document.querySelector('a[href="#' + scrollElements[index].id + '"]').parentNode.classList.remove(
+                    'scroll')
+            }
+            // 给距离视口最近的标记元素对应的导航元素添加高亮类
+            document.querySelector('a[href="#' + id + '"]').parentNode.classList.add('scroll')
+            // 给距离视口最近的标记元素移除偏移类
+            scrollElements[minIndex].classList.remove('offset')
         }
 
         // 获取导航下的所有菜单
@@ -246,8 +271,8 @@
                 // 缓动
                 let currentTop = window.scrollY // 当前的高度
                 let targetTop = top - 70 // 要到元素的高度 
-                let length = Math.abs(currentTop - targetTop)   // 移动的距离
-                let time = (length/500)*800 // 移动500PX用800毫秒 移动的距离/500 * 1000就是移动的时间
+                let length = Math.abs(currentTop - targetTop) // 移动的距离
+                let time = (length / 500) * 800 // 移动500PX用800毫秒 移动的距离/500 * 1000就是移动的时间
                 function animate(time) {
                     requestAnimationFrame(animate)
                     TWEEN.update(time)
@@ -259,10 +284,10 @@
                 let tween = new TWEEN.Tween(coords)
                     .to({
                         y: targetTop
-                    }, time > 800 ? 800 : time) 
+                    }, time > 800 ? 800 : time)
                     .easing(TWEEN.Easing.Quadratic.InOut)
                     .onUpdate(function () {
-                        window.scrollTo(0,coords.y)
+                        window.scrollTo(0, coords.y)
                         currentTop = coords.y
                     })
                     .start()
