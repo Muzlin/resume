@@ -1,302 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>resume</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- <link rel="stylesheet" href="./css/loading.css"> -->
-    <!-- icon -->
-    <script src="//at.alicdn.com/t/font_572339_j00wzda338c6usor.js"></script>
-    <script src="./scripts/tween.min.js"></script>
+  <title>Muzlin</title>
+  <script src="//at.alicdn.com/t/font_451045_32zbfqegtq3t0529.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
-    <div class="site-loading">
-        <div class="loading"></div>
-    </div>
-    <div id="topNavBar" class="top-nav-bar">
-        <div class="top-nav-bar-inner clearfix">
-            <a class="logo" href="#">
-                <span class="rs">RS</span>
-                <span>card</span>
-            </a>
-            <nav>
-                <ul class="clearfix menu">
-                    <li>
-                        <a href="#siteAbout">关于</a>
-                    </li>
-                    <li>
-                        <a href="#siteSkills">技能</a>
-                    </li>
-                    <li>
-                        <a href="#sitePortfolio">作品</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="#">搜索的</a>
-                            </li>
-                            <li>
-                                <a href="#">数据库得到</a>
-                            </li>
-                            <li>
-                                <a href="#">大都开了</a>
-                            </li>
-                            <li>
-                                <a href="#">即可几万块</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">博客</a>
-                    </li>
-                    <li>
-                        <a href="#">日历</a>
-                    </li>
-                    <li>
-                        <a href="#">联系方式</a>
-                    </li>
-                    <li>
-                        <a href="#">其他</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    <!-- top nav bar end -->
-    <div class="banner">
-    </div>
-    <!-- banner end -->
-    <main data-scrolly id="siteAbout" class="main">
-        <div class="card-box">
-            <div class="card-inner clearfix">
-                <div class="picture">
-                    <img src="./img/avatar.jpg" width="290" height="320" alt="头像">
-                </div>
-                <div class="text">
-                    <span class="welcome">HELLO</span>
-                    <h1>李霖</h1>
-                    <p>前端开发工程师</p>
-                    <hr>
-                    <dd>
-                        <dt>所在城市</dt>
-                        <dl>成都</dl>
-                        <dt>电话</dt>
-                        <dl>1811234567</dl>
-                        <dt>邮箱</dt>
-                        <dl>1030996014@qq.com</dl>
-                        <dt>博客</dt>
-                        <dl>
-                            <a href="https://www.muzlin.cn" target="_blank">muzlin.cn</a>
-                        </dl>
-                    </dd>
-                </div>
-            </div>
-            <footer class="link">
-                <a href="#">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-github"></use>
-                    </svg>
-                </a>
-                <a href="#">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-weibo"></use>
-                    </svg>
-                </a>
-                <a href="#">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-google"></use>
-                    </svg>
-                </a>
-            </footer>
-        </div>
-        <div class="downloan-resume-wapper">
-            <a class="download-resume" href="#">下载 PDF 简历</a>
-        </div>
-        <p class="description">
-            李霖，前端开发工程师，.NET后端工程师，现就职于 口贷网 任职.NET开发。
-            <br> 技能：前端开发，PHP开发，.NET开发，Node.js开发
-        </p>
-    </main>
-    <!-- main end -->
-    <section data-scrolly id="siteSkills" class="skills">
-        <h2>技能</h2>
-        <div class="skills-inner shadow">
-            <ul class="clearfix">
-                <li>
-                    <span>HTML 5 & CSS3</span>
-                    <div class="bar-progress">
-                        <span class="bar-inner" style="width:78%;">
-                        </span>
-                    </div>
-                </li>
-                <li>
-                    <span>JavaScript ES6 & JQuery</span>
-                    <div class="bar-progress">
-                        <span class="bar-inner" style="width:83%;">
-                        </span>
-                    </div>
-                </li>
-                <li>
-                    <span>Vue.js & React</span>
-                    <div class="bar-progress">
-                        <span class="bar-inner" style="width:67%;">
-                        </span>
-                    </div>
-                </li>
-                <li>
-                    <span>Node.js & Express & Koa & Egg.js</span>
-                    <div class="bar-progress">
-                        <span class="bar-inner" style="width:60%;">
-                        </span>
-                    </div>
-                </li>
-                <li>
-                    <span>PHP & ThinkPHP</span>
-                    <div class="bar-progress">
-                        <span class="bar-inner" style="width:41%;">
-                        </span>
-                    </div>
-                </li>
-                <li>
-                    <span>C# & .NET</span>
-                    <div class="bar-progress">
-                        <span class="bar-inner" style="width:88%;">
-                        </span>
-                    </div>
-                </li>
+  <div id="topNavBar" class="topNavBar">
+    <div class="topNavBar-inner clearfix">
+      <a class="logo" href="#" alt="logo" style="float: left;">
+        <span class="rs">RS</span>
+        <span class="card">card</span>
+      </a>
+      <nav class="menu" style="float: right;">
+        <ul class="clearfix">
+          <li>
+            <a href="#siteAbout">关于</a>
+          </li>
+          <li>
+            <a href="#siteSkills">技能</a>
+          </li>
+          <li>
+            <a href="#siteWorks">作品</a>
+            <ul class="submenu">
+              <li>作品1</li>
+              <li>作品2</li>
+              <li>作品3</li>
             </ul>
-        </div>
-    </section>
-    <section data-scrolly id="sitePortfolio" class="portfolio">
-        <h2>作品</h2>
-        <nav>
-            <ul class="clearfix">
-                <li id="portfolio1">所有</li>
-                <li id="portfolio2">框架</li>
-                <li id="portfolio3">其他</li>
+          </li>
+          <li>
+            <a href="#">博客</a>
+            <ul class="submenu">
+              <li>博客1</li>
+              <li>博客2</li>
+              <li>博客3</li>
             </ul>
-            <div class="nav-bar">
-                <span id="portfolioBar" class="nav-bar-inner state-1"></span>
-            </div>
-
-            <script>
-                portfolio1.onclick = function () {
-                    portfolioBar.className = 'nav-bar-inner'
-                }
-                portfolio2.onclick = function () {
-                    portfolioBar.className = 'nav-bar-inner state-2'
-                }
-                portfolio3.onclick = function () {
-                    portfolioBar.className = 'nav-bar-inner state-3'
-                }
-            </script>
-        </nav>
-        <div class="jobs clearfix">
-            <div class="big shadow" style="top:0;left:0;">
-                <img src="./img/1.jpg" alt="">
-            </div>
-            <div class="small shadow" style="top:0;left:645px;">
-                <img src="./img/2.jpg" alt="">
-            </div>
-            <div class="small shadow" style="top:312px;left:645px;">
-                <img src="./img/3.jpg" alt="">
-            </div>
+          </li>
+          <li>
+            <a href="#">日历</a>
+          </li>
+          <li>
+            <a href="#">联系方式</a>
+          </li>
+          <li>
+            <a href="#">其他</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="banner">
+    <div class="mask"></div>
+  </div>
+  <main>
+    <div data-x id="siteAbout" class="userCard">
+      <div class="pictureAndText clearfix">
+        <div class="picture">
+          <img src="./img/avatar.jpg" width=299 height=347 alt="头像">
         </div>
-    </section>
-    <script>
-        // 获取所有标记元素
-        let scrollElements = document.querySelectorAll('[data-scrolly]')
-        for (let index = 0; index < scrollElements.length; index++) {
-            // 给标记元素添加偏移类
-            scrollElements[index].classList.add('offset')
-        }
-        GetRecentElement();
-        // 滑动事件
-        window.onscroll = function () {
-            if (window.scrollY < 50) {
-                topNavBar.classList.remove('stick')
-            } else {
-                topNavBar.classList.add('stick')
-            }
-            GetRecentElement();
-        }
+        <div class="text">
+          <span class="welcome">Hello
+            <span class="triangle"></span>
+          </span>
+          <h1>李霖</h1>
+          <p>前端开发工程师</p>
+          <hr>
+          <dl>
+            <dt>年龄</dt>
+            <dd>18</dd>
+            <dt>所在城市</dt>
+            <dd>成都</dd>
+            <dt>邮箱</dt>
+            <dd>muzlingm@gmail.com</dd>
+            <dt>手机</dt>
+            <dd>18188888888</dd>
+          </dl>
+        </div>
+      </div>
+      <footer class="media">
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-github"></use>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-Ankerwebicon-"></use>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-weibo"></use>
+          </svg>
+        </a>
+      </footer>
+    </div>
 
-        // 获取距离视口最近的标记元素 并做一些处理
-        function GetRecentElement() {
-            // 获取最接近视口的元素ID
-            let minIndex = 0;
-            for (let index = 0; index < scrollElements.length; index++) {
-                let nowTop = window.scrollY // 当前的高度
-                if (Math.abs(scrollElements[index].offsetTop - nowTop) < Math.abs(scrollElements[minIndex].offsetTop -
-                        nowTop)) {
-                    minIndex = index
-                }
-            }
-            let id = scrollElements[minIndex].id
-            for (let index = 0; index < scrollElements.length; index++) {
-                // 给标记元素对应的导航元素移除高亮类
-                document.querySelector('a[href="#' + scrollElements[index].id + '"]').parentNode.classList.remove(
-                    'scroll')
-            }
-            // 给距离视口最近的标记元素对应的导航元素添加高亮类
-            document.querySelector('a[href="#' + id + '"]').parentNode.classList.add('scroll')
-            // 给距离视口最近的标记元素移除偏移类
-            scrollElements[minIndex].classList.remove('offset')
-        }
+    <p class="downloadResume-wrapper">
+      <a class="downloadResume" href="./resume.pdf" target="_blank" download>下载 PDF 简历</a>
+    </p>
 
-        // 获取导航下的所有菜单
-        let navLiTargets = document.querySelectorAll('nav > ul.menu > li')
-        for (let index = 0; index < navLiTargets.length; index++) {
-            navLiTargets[index].onmouseenter = function (e) {
-                e.target.classList.add('active')
-            }
-            navLiTargets[index].onmouseleave = function (e) {
-                e.target.classList.remove('active')
-            }
-        }
+    <p class="selfIntroduction">
+      李霖，前端工程师，.NET开发工程师，PHP开发工程师，现在在 口贷网 任职.NET后端开发。
+      <br> 技能：前端开发，.NET 开发，PHP 开发
+    </p>
 
-        // 点击导航按钮 缓动到指定位置
-        let navATargets = document.querySelectorAll('nav > ul.menu > li > a')
-        for (let index = 0; index < navATargets.length; index++) {
-            navATargets[index].onclick = function (e) {
-                e.preventDefault() // 阻止a的默认事件
-                let aTarget = e.currentTarget
-                let href = aTarget.getAttribute('href')
-                // 获取对应的div
-                let element = document.querySelector(href)
-                // 获取div到窗口顶部的距离
-                let top = element.offsetTop
-                // 缓动
-                let currentTop = window.scrollY // 当前的高度
-                let targetTop = top - 70 // 要到元素的高度 
-                let length = Math.abs(currentTop - targetTop) // 移动的距离
-                let time = (length / 500) * 800 // 移动500PX用800毫秒 移动的距离/500 * 1000就是移动的时间
-                function animate(time) {
-                    requestAnimationFrame(animate)
-                    TWEEN.update(time)
-                }
-                requestAnimationFrame(animate)
-                let coords = {
-                    y: currentTop
-                };
-                let tween = new TWEEN.Tween(coords)
-                    .to({
-                        y: targetTop
-                    }, time > 800 ? 800 : time)
-                    .easing(TWEEN.Easing.Quadratic.InOut)
-                    .onUpdate(function () {
-                        window.scrollTo(0, coords.y)
-                        currentTop = coords.y
-                    })
-                    .start()
-            }
-        }
+  </main>
+  <section data-x id="siteSkills" class="skills">
+    <h2>技能</h2>
+    <ol class="clearfix">
+      <li>
+        <h3>
+          HTML 5 &amp; CSS 3
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 10%;"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          JavaScript
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 20%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          jQuery
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 30%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          Vue.js
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 40%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          React.js
+        </h3>
+        <div class="progressBar">
+          <div class="progress"  style="width: 50%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          Node.js
+        </h3>
+        <div class="progressBar">
+          <div class="progress"  style="width: 60%"></div>
+        </div>
+      </li>
+    </ol>
+  </section>
+  <section data-x class="portfolio" id="siteWorks">
+    <h2>作品集</h2>
 
+    <!-- 这就是 view , 用户看得见的东西-->
+    <!-- Slider main container -->
+    <div id="mySlides">
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <img src="./img/works/nav-page.jpg" class="swiper-slide">
+          <img src="./img/works/canvas.jpg" class="swiper-slide">
+          <img src="./img/works/apple-style-slides.jpg" class="swiper-slide">
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
 
-        
-    </script>
+        <!-- If we need navigation buttons -->
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+  </section>
+  <section class="message">
+    <h2>留言</h2>
+    <ol id="messageList">
+    </ol>
+    <form id="postMessageForm" style="width: 700px; margin: 50px auto;">
+      <label for="">姓名</label>
+      <input type="text" name="name">
+      <label for="">内容</label>
+      <input type="text" name="content">
+      <input type="submit" value="提交">
+    </form>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
+  <script src="//cdn1.lncld.net/static/js/3.5.0/av-min.js"></script>
+  <!-- 模块化 -->
+  <script src="./js/init-swiper.js"></script>
+  <script src="./js/auto-slide-up.js"></script>
+  <script src="./js/sticky-topbar.js"></script>
+  <script src="./js/smoothly-navigation.js"></script>
+  <script src="./js/message.js"></script>
 </body>
 
 </html>
